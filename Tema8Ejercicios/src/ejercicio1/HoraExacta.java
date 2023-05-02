@@ -1,14 +1,32 @@
 package ejercicio1;
 
+/**
+ * Subclase de la padre "Hora"
+ * @author mditaranto
+ *
+ */
 public class HoraExacta extends Hora {
 
+	/**
+	 * Atributo que guarda los segundos
+	 */
 	int segundos;
 
+	/**
+	 * Constructor con parametros
+	 * @param hora
+	 * @param minutos
+	 * @param segundos
+	 */
 	public HoraExacta(int hora, int minutos, int segundos) {
 		super(hora, minutos);
 		this.segundos = segundos;
 	}
 
+	/**
+	 * Metodo que incrementa en 1 los segundos.
+	 * Implementa el metodo inc de la clase padre
+	 */
 	@Override
 	public void inc() {
 		if (segundos == 59) {
@@ -19,18 +37,10 @@ public class HoraExacta extends Hora {
         }
 	}
 
-	@Override
-	public boolean setMinutos(int minutos) {
-		// TODO Auto-generated method stub
-		return super.setMinutos(minutos);
-	}
-
-	@Override
-	public boolean setHora(int hora) {
-		// TODO Auto-generated method stub
-		return super.setHora(hora);
-	}
-
+	/**
+	 * Metodo toString de la clase
+	 * Implementa el metodo de la clase padre
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -38,6 +48,10 @@ public class HoraExacta extends Hora {
 		 
 	}
 
+	/**
+	 * Setter de los segundos
+	 * @param segundos
+	 */
 	public void setSegundos(int segundos) {
 		if (segundos >= 0 && segundos < 60) {
 			this.segundos = segundos;

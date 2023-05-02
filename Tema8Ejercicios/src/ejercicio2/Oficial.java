@@ -1,9 +1,15 @@
 package ejercicio2;
 
+/**
+ * Subclase de la clase padre "Empleado"
+ * 
+ * @author mditaranto
+ *
+ */
 public class Oficial extends Operario {
 
 	/**
-	 * 
+	 * Constructor sin parametros
 	 */
 	public Oficial() {
 		super();
@@ -11,6 +17,7 @@ public class Oficial extends Operario {
 	}
 
 	/**
+	 * Constructor con parametros
 	 * @param nombre
 	 */
 	public Oficial(String nombre) {
@@ -18,6 +25,9 @@ public class Oficial extends Operario {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Metodo toString que implementa la clase padre
+	 */
 	@Override
 	public String toString() {
 		return super.toString() + " Oficial";

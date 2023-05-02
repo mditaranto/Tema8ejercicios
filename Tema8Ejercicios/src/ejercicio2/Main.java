@@ -4,6 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		//Creacion de los objetos
 		Empleado E1 = new Empleado("Matias");
 
 		Operario O1 = new Operario("Manu");
@@ -14,6 +15,7 @@ public class Main {
 		
 		Oficial OF1 = new Oficial("Pepe Pablo");
 
+		//Impresion de dichos objetos
 		System.out.println(E1);
 		System.out.println(O1);
 		System.out.println(D1);
