@@ -1,25 +1,52 @@
 package ejercicio4;
 
+/**
+ * Clase que guarda electrodomesticos
+ * @author Matis
+ *
+ */
 public class Electrodomestico {
 
+	/**
+	 * Atributo del precio base
+	 */
 	protected int precioBase;
 
+	/**
+	 * Atributo del preso
+	 */
 	protected int peso;
 	
+	/**
+	 * Atributo del color
+	 */
 	protected Color color;
 	
+	/**
+	 * Atributo del consumo
+	 */
 	protected Consumo consumo;
 	
+	/**
+	 * Enumerador del color
+	 * @author Matis
+	 *
+	 */
 	protected enum Color {
 		Blanco, Negro, Rojo, Azul, Gris
 	}
 	
+	/**
+	 * Enumerador del consumo
+	 * @author Matis
+	 *
+	 */
 	protected enum Consumo {
 		A, B, C, D, E , F
 	}
 
 	/**
-	 * 
+	 * Constructor sin parametros
 	 */
 	public Electrodomestico() {
 		color = Color.Blanco;
@@ -28,6 +55,11 @@ public class Electrodomestico {
 		peso = 5;
 	}
 
+	/**
+	 * Constructor con parametros
+	 * @param precio
+	 * @param peso
+	 */
 	public Electrodomestico(int precio, int peso) {
 		this.peso = peso;
 		this.precioBase = precio;
@@ -36,6 +68,7 @@ public class Electrodomestico {
 	}
 
 	/**
+	 * Constructor con parametros
 	 * @param precioBase
 	 * @param color
 	 * @param consumo
@@ -52,6 +85,7 @@ public class Electrodomestico {
 	}
 
 	/**
+	 *Getter del precio base
 	 * @return the precioBase
 	 */
 	public int getPrecioBase() {
@@ -59,6 +93,7 @@ public class Electrodomestico {
 	}
 
 	/**
+	 * Getter del peso
 	 * @return the peso
 	 */
 	public int getPeso() {
@@ -66,6 +101,7 @@ public class Electrodomestico {
 	}
 
 	/**
+	 * Getter del color
 	 * @return the color
 	 */
 	public Color getColor() {
@@ -73,13 +109,18 @@ public class Electrodomestico {
 	}
 
 	/**
+	 * Getter del consumo
 	 * @return the consumo
 	 */
 	public Consumo getConsumo() {
 		return consumo;
 	}
 
-	protected void comprobarConsumoEnergetico(char letra) {
+	/**
+	 * Metodo que comprueba el consumo energetico
+	 * @param letra
+	 */
+	public void comprobarConsumoEnergetico(char letra) {
 		
 		if (!(letra >= 'A' && letra <= 'F')) {
 			consumo = Consumo.F;
@@ -87,14 +128,22 @@ public class Electrodomestico {
 		
 	}
 	
+	/**
+	 * Metodo que comprueba el color
+	 * @param color
+	 */
 	@SuppressWarnings("unlikely-arg-type")
-	protected void comprobarColor(String color) {
+	public void comprobarColor(String color) {
 		
 		if (!Color.values().equals(color)) {
 			this.color = Color.Blanco;
 		}
 	}
 	
+	/**
+	 * Metodo del precio final
+	 * @return
+	 */
 	public int precioFinal() {
 		
 		int precio = precioBase;
